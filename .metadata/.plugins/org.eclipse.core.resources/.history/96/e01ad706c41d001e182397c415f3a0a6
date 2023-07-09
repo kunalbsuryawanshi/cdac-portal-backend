@@ -1,0 +1,16 @@
+package org.program.service;
+
+import org.program.entity.StudentRegistration;
+import org.program.repository.StudentRegistrationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentRegistrationService {
+	@Autowired
+	private StudentRegistrationRepository registrationRepo;
+	
+	public void saveStudentInfo(StudentRegistration studentRegistration) {
+		registrationRepo.save(studentRegistration);
+	}
+}

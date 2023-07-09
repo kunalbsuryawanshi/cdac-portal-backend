@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CdacPortalApplicationTests.contextLoads" project="cdac-portal" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="org.program.CdacPortalApplicationTests" time="0.191" displayname="CdacPortalApplicationTests" uniqueid="[engine:junit-jupiter]/[class:org.program.CdacPortalApplicationTests]">
+    <testcase name="contextLoads" classname="org.program.CdacPortalApplicationTests" time="0.191" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:org.program.CdacPortalApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>

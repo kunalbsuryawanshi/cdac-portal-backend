@@ -1,0 +1,27 @@
+package org.program.controller;
+
+import java.util.List;
+
+import org.program.entity.LeaveApplication;
+import org.program.service.LeaveApplicationService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin
+public class LeaveApplicationController {
+	@Autowired
+	private LeaveApplicationService leaveService;
+	
+	@PostMapping("/leave-application")
+	public void addLeaveApplication(@RequestBody LeaveApplication application) {
+		leaveService.saveLeaveApplication(application);
+	}
+	@PostMapping("/get-leave-application-record")
+	public List<LeaveApplication> getLeaveApplication() {
+		return leaveService.getApplicationRecords();
+	}
+}

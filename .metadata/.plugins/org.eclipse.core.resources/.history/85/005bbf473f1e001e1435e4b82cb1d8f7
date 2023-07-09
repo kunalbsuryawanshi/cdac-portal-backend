@@ -1,0 +1,22 @@
+package org.program.controller;
+
+import org.program.entity.Issue;
+import org.program.service.IssueService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin
+public class IssueController {
+
+	@Autowired
+	private IssueService issueService;
+	
+	@PostMapping("/complaint-registration")
+	public void addComplaint(@RequestBody Issue issue) {
+		issueService.saveComplaint(issue);
+	}
+}

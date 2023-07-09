@@ -1,0 +1,25 @@
+package org.program;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.program.entity.LeaveApplication;
+import org.program.entity.StudentRegistration;
+import org.program.repository.LeaveApplicationRepository;
+import org.program.repository.StudentRegistrationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CdacPortalApplicationTests {
+
+	@Autowired
+	private LeaveApplicationRepository leavRepo;
+	
+	@Test
+	void contextLoads() {
+		List<LeaveApplication> list = leavRepo.findByStudentEmail("kunalbsuryawanshi@gmail.com");
+		list.forEach(System.out::println);
+	}
+
+}

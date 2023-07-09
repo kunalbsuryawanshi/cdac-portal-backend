@@ -1,0 +1,16 @@
+package org.program.service;
+
+import org.program.entity.Issue;
+import org.program.repository.IssueRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class IssueService {
+	@Autowired
+	private IssueRepository issueRepo;
+	
+	public void saveComplaint(Issue issue) {
+		issueRepo.save(issue);
+	}
+}

@@ -1,0 +1,27 @@
+package org.program;
+
+import org.junit.jupiter.api.Test;
+import org.program.entity.StudentRegistration;
+import org.program.repository.StudentRegistrationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CdacPortalApplicationTests {
+
+	@Autowired
+	private StudentRegistrationRepository registrationRepo;
+	
+	@Test
+	void contextLoads() {
+		StudentRegistration str = new StudentRegistration();
+		str.setName("kunal");
+		str.setEmail("kunal@gmail.com");
+		str.setPhoneNumber("9850981350");
+		str.setPrnNumber("230340520043");
+		str.setPassword("Kbs@2432");
+		str.setConfirmPassword("Kbs@2432");
+		registrationRepo.save(str);
+	}
+
+}

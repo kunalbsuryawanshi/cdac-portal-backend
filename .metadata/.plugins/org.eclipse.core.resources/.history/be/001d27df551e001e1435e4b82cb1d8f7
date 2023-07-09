@@ -1,0 +1,14 @@
+package org.program.service;
+
+import org.program.repository.FacultyLoginRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class FacultyLoginService {
+
+	@Autowired
+	private FacultyLoginRepository facultyRepo;
+	
+	
+}

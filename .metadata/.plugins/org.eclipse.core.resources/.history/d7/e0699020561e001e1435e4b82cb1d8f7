@@ -1,0 +1,26 @@
+package org.program.service;
+
+import org.program.entity.FacultyLogin;
+import org.program.entity.StudentLogin;
+import org.program.repository.FacultyLoginRepository;
+import org.program.repository.StudentLoginRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class FacultyLoginService {
+
+	@Autowired
+	private FacultyLoginRepository facultyRepo;
+	
+	
+	public int varifyUser(StudentLogin login) {
+		FacultyLogin faculty = facultyRepo.findByUsernameAndPassword(login.getEmail(), login.getPassword());
+		if(faculty == null) {
+			return 500;
+		}
+		else
+			return 200;
+		
+	}
+}

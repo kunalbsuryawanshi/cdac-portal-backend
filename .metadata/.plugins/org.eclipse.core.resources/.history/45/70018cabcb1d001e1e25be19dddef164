@@ -1,0 +1,23 @@
+package org.program.service;
+
+import org.program.entity.StudentLogin;
+import org.program.repository.StudentLoginRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentLoginService {
+	@Autowired
+	private StudentLoginRepository loginRepo;
+	
+	public String varifyUser(StudentLogin login) {
+		StudentLogin student = loginRepo.findByEmailAndPassword(login.getEmail(), login.getPassword());
+		if(student == null) {
+			return "404";
+		}
+		else
+			return "200";
+		
+	}
+	
+}

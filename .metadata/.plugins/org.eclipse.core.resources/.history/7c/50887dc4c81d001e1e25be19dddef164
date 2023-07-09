@@ -1,0 +1,17 @@
+package org.program.service;
+
+import org.program.entity.StudentLogin;
+import org.program.repository.StudentLoginRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentLoginService {
+	@Autowired
+	private StudentLoginRepository loginRepo;
+	
+	public void varifyUser(StudentLogin login) {
+		
+	}
+	
+}

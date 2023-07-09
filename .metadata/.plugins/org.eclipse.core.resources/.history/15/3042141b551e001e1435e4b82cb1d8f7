@@ -1,0 +1,30 @@
+package org.program;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.program.entity.Issue;
+import org.program.entity.LeaveApplication;
+import org.program.entity.StudentRegistration;
+import org.program.repository.IssueRepository;
+import org.program.repository.LeaveApplicationRepository;
+import org.program.repository.StudentRegistrationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CdacPortalApplicationTests {
+
+	@Autowired
+//	private IssueRepository issueRepo;
+	
+	@Test
+	void contextLoads() {
+//		Issue issue = new Issue();
+//		issue.setToEmail("cdac@gmail.com");
+//		issue.setStudentEmail("kunal@gmail.com");
+//		issue.setDescribedComplaint("complaint about cdac");
+//		issueRepo.save(issue);
+	}
+
+}
