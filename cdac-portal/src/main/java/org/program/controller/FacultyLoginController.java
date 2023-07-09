@@ -33,5 +33,9 @@ public class FacultyLoginController {
 	public List<Issue> getComplaints(){
 		return facultyService.getComplaints();
 	}
+	@PostMapping("/faculty-forgot-password")
+	public int forgotPassword(@RequestBody FacultyLogin login) {
+		return facultyService.forgotPassword(login);
+	}
 	
 }

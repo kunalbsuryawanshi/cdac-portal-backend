@@ -20,4 +20,15 @@ public class StudentLoginService {
 		
 	}
 	
+	public int forgotPassword(StudentLogin student) {
+		StudentLogin newStudent = new StudentLogin();
+		newStudent = loginRepo.findByEmail(student.getEmail());
+		if(newStudent == null) {
+			return 500;
+		}else {
+			loginRepo.changePassword(student.getPassword(), student.getEmail());
+			return 200;
+		}
+	}
+	
 }

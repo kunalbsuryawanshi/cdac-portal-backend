@@ -17,6 +17,9 @@ public class IssueService {
 	}
 	public List<Issue> getComplaintRecords(String email) {
 		List<Issue> list = issueRepo.findByStudentEmail(email);
+		if(list == null) {
+			return null;
+		}
 		return list;
 	}
 	public void deleteComplaintRecord(int id) {

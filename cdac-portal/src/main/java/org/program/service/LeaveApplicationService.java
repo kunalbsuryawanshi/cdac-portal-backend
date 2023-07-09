@@ -18,6 +18,9 @@ public class LeaveApplicationService {
 
 	public List<LeaveApplication> getApplicationRecords(String email) {
 		List<LeaveApplication> list = leaveRepo.findByStudentEmail(email);
+		if(list == null) {
+			return null;
+		}
 		return list;
 	}
 

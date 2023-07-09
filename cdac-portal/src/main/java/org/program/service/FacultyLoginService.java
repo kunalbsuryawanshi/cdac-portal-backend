@@ -39,4 +39,15 @@ public class FacultyLoginService {
 	public List<Issue> getComplaints(){
 		return issueRepo.findAll();
 	}
+	
+	public int forgotPassword(FacultyLogin login) {
+		FacultyLogin newFaculty = new FacultyLogin();
+		newFaculty = facultyRepo.findByUsername(login.getUsername());
+		if(newFaculty == null) {
+			return 500;
+		}else {
+			facultyRepo.changePassword(login.getPassword(), login.getUsername());
+			return 200;
+		}
+	}
 }
